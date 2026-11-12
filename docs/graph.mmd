@@ -1,0 +1,44 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	start_turn(start_turn)
+	plan_query(plan_query)
+	ask_clarification(ask_clarification)
+	scope_response(scope_response)
+	insufficient_evidence_response(insufficient_evidence_response)
+	complete_split_articles(complete_split_articles)
+	generate_answer(generate_answer)
+	validate_citations(validate_citations)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> start_turn;
+	ask_clarification --> plan_query;
+	complete_split_articles --> generate_answer;
+	generate_answer --> validate_citations;
+	plan_query -.-> ask_clarification;
+	plan_query -.-> retrieve\3a__start__;
+	plan_query -.-> scope_response;
+	retrieve\3arerank_candidates -.-> complete_split_articles;
+	retrieve\3arerank_candidates -.-> insufficient_evidence_response;
+	start_turn --> plan_query;
+	insufficient_evidence_response --> __end__;
+	scope_response --> __end__;
+	validate_citations --> __end__;
+	subgraph retrieve
+	retrieve\3a__start__(<p>__start__</p>)
+	retrieve\3alexical_search(lexical_search)
+	retrieve\3asemantic_search(semantic_search)
+	retrieve\3afuse_candidates(fuse_candidates)
+	retrieve\3arerank_candidates(rerank_candidates)
+	retrieve\3a__start__ -.-> retrieve\3alexical_search;
+	retrieve\3a__start__ -.-> retrieve\3asemantic_search;
+	retrieve\3afuse_candidates --> retrieve\3arerank_candidates;
+	retrieve\3alexical_search --> retrieve\3afuse_candidates;
+	retrieve\3asemantic_search --> retrieve\3afuse_candidates;
+	end
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Environments and caches
+.venv/
+.venv-eval/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated at runtime
+data/index/
+data/model_cache/
+logs/
+
+# Downloaded legislation files: redistribution rights are not confirmed.
+# Re-create them with: python scripts/fetch_corpus.py
+data/raw/
+
+# Local tooling
+.claude/
+
+# Presentation materials are kept locally only
+presentation/
+docs/presentation_prompt.md

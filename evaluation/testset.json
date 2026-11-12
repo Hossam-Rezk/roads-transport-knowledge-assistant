@@ -1,0 +1,89 @@
+{
+  "description": "Corpus-grounded evaluation questions. Each reference answer was written by reading the cited source chunk(s) in the index, not by the system under test.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Who has to pay the traffic toll fee in Dubai?",
+      "reference": "The RTA charges a Traffic Toll Fee to owners of motor vehicles that use the road network of the Emirate and pass through a Traffic Toll Gate in one direction, whether or not the vehicle is registered in the Emirate.",
+      "expected_document_ids": ["dlp-13"],
+      "source_chunk_ids": ["dlp-13-003-0"]
+    },
+    {
+      "id": "q02",
+      "question": "Under Law No. (22) of 2006, which vehicles does the traffic toll not apply to?",
+      "reference": "Law No. (22) of 2006 does not apply to: vehicles registered with the Armed Forces carrying its number plates and logos; vehicles of the Police and Civil Defence carrying their number plates and logos; vehicles dedicated to transporting students of schools, institutes or universities; public transport buses of the RTA; and vehicles exempted by a resolution of the Executive Director.",
+      "expected_document_ids": ["dlp-13"],
+      "source_chunk_ids": ["dlp-13-010-0"]
+    },
+    {
+      "id": "q03",
+      "question": "How much is the traffic toll charge for a light vehicle, and how much does a Traffic Toll Card cost?",
+      "reference": "The traffic toll charge for a light vehicle (public or private) is 4.00 dirhams, and a Traffic Toll Card costs 50.00 dirhams.",
+      "expected_document_ids": ["dlp-237"],
+      "source_chunk_ids": ["dlp-237-005-0"]
+    },
+    {
+      "id": "q04",
+      "question": "What is the fine for passing through a traffic toll gate without paying the prescribed charges?",
+      "reference": "The fine for passing through a Traffic Toll Gate without paying the prescribed charges is 100.00 dirhams.",
+      "expected_document_ids": ["dlp-237"],
+      "source_chunk_ids": ["dlp-237-006-0"]
+    },
+    {
+      "id": "q05",
+      "question": "How much is the Dubai airports departure fee and which passengers are exempt from it?",
+      "reference": "The departure fee is seventy-five dirhams (AED 75.00) for every passenger departing the United Arab Emirates through Dubai airports. Exempt are: passengers below the age of two years; on-duty pilots and cabin crew; transit passengers whose arrival and departure flight number is the same; and transfer passengers whose final destination is not the United Arab Emirates and whose departure is within twenty-four hours of arrival.",
+      "expected_document_ids": ["dlp-1432"],
+      "source_chunk_ids": ["dlp-1432-001-0"]
+    },
+    {
+      "id": "q06",
+      "question": "Who collects the Dubai airports departure fee, and where is the money paid?",
+      "reference": "Airlines operating in Dubai airports collect the fee when issuing air tickets and must transfer the proceeds to the Corporation. The fee is paid to the Public Treasury of the Government of Dubai.",
+      "expected_document_ids": ["dlp-1432"],
+      "source_chunk_ids": ["dlp-1432-002-0", "dlp-1432-003-0"]
+    },
+    {
+      "id": "q07",
+      "question": "Can an autonomous vehicle travel on a road in Dubai without being licensed by the RTA?",
+      "reference": "No. No Autonomous Vehicle may travel on a Road unless it is licensed by the RTA. An Autonomous Vehicle licensed by another licensing entity in the UAE may not travel within the Emirate without first obtaining the Permit from the RTA.",
+      "expected_document_ids": ["dlp-1525"],
+      "source_chunk_ids": ["dlp-1525-006-0"]
+    },
+    {
+      "id": "q08",
+      "question": "Who is liable for damage caused by an autonomous vehicle?",
+      "reference": "The Operator is liable for compensating for any damage to property or harm to individuals caused by the Autonomous Vehicle, without prejudice to the Operator's right of recourse against the person actually responsible. The RTA is not liable to third parties for damage they sustain as a result of using Autonomous Vehicles.",
+      "expected_document_ids": ["dlp-1525"],
+      "source_chunk_ids": ["dlp-1525-014-0"]
+    },
+    {
+      "id": "q09",
+      "question": "What are the peak hours on weekdays during which the parking fee applies?",
+      "reference": "On weekdays (Monday to Saturday) the peak hours are from 8:00 a.m. to 10:00 a.m. and from 4:00 p.m. to 8:00 p.m.",
+      "expected_document_ids": ["dlp-1941"],
+      "source_chunk_ids": ["dlp-1941-002-0"]
+    },
+    {
+      "id": "q10",
+      "question": "What is the fine for operating a water taxi without an authorisation from the RTA?",
+      "reference": "The fine for operating a Water Taxi without an authorisation from the RTA is 2,000.00 dirhams.",
+      "expected_document_ids": ["dlp-236"],
+      "source_chunk_ids": ["dlp-236-013-0"]
+    },
+    {
+      "id": "q11",
+      "question": "Is a permit required to pilot or use an unmanned aircraft in Dubai, and who issues it?",
+      "reference": "Yes. No person may pilot or use Unmanned Aircraft in the Emirate without first obtaining the relevant Permit from the DCAA (Dubai Civil Aviation Authority).",
+      "expected_document_ids": ["dlp-1718"],
+      "source_chunk_ids": ["dlp-1718-010-0"]
+    },
+    {
+      "id": "q12",
+      "question": "What is the fine for a driving instruction establishment that conducts the activity without a permit?",
+      "reference": "The fine for an Establishment conducting the driving instruction Activity without a Permit is 10,000 dirhams.",
+      "expected_document_ids": ["dlp-1915"],
+      "source_chunk_ids": ["dlp-1915-010-0"]
+    }
+  ]
+}

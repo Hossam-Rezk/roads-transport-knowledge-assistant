@@ -1,0 +1,425 @@
+[
+  {
+    "id": "q01",
+    "question": "Who has to pay the traffic toll fee in Dubai?",
+    "reference": "The RTA charges a Traffic Toll Fee to owners of motor vehicles that use the road network of the Emirate and pass through a Traffic Toll Gate in one direction, whether or not the vehicle is registered in the Emirate.",
+    "expected_document_ids": [
+      "dlp-13"
+    ],
+    "status": "answered",
+    "answer": "The traffic toll fee in Dubai is required to be paid by vehicle owners whose vehicles pass through Traffic Toll Gates in one direction, regardless of whether the vehicle is registered in the Emirate or not. This fee is charged by the RTA for the use of the road network of the Emirate. There are exemptions for certain vehicles such as those of societies and centres for people with special needs, vehicles of the Awqaf and Minors Affairs Foundation in Dubai, vehicles intended for use by persons with special needs, and buses used for transportation of staff and workers as prescribed by the RTA. Motor vehicles may not pass through Traffic Toll Gates without payment of the toll fees through subscription to the Salik System.",
+    "cited_chunk_ids": [
+      "dlp-237-001-0",
+      "dlp-13-003-0",
+      "dlp-178-017-0",
+      "dlp-178-002-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-237-001-0",
+      "dlp-178-017-0",
+      "dlp-178-002-0",
+      "dlp-13-003-0",
+      "dlp-178-011-0"
+    ],
+    "contexts": [
+      "Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law of the Emirate of Dubai\nArticle (1)\nVehicle Owners whose vehicles pass through Traffic Toll Gates in one direction will pay the fees prescribed in Schedule (1) attached hereto.",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (17)\nThe following Vehicles will be exempt from the Traffic Toll fees:\n1. Vehicles of societies and centres for people with special needs;\n2. Vehicles of the Awqaf and Minors Affairs Foundation in Dubai;\n3. Vehicles intended for use by persons with special needs; and 4. buses used for transportation of staff and workers, in accordance with the requirements prescribed by the RTA.",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (2)\nMotor Vehicles may not pass through Traffic Toll Gates without payment of the Traffic Toll fees through subscription to the Salik System.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (3)\nThe RTA will charge motor Vehicle Owners whose Vehicles use the Road network of the Emirate and pass through a Traffic Toll Gate in one direction a “Traffic Toll Fee”, whether or not the Vehicle is registered in the Emirate.",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (11)\nTraffic Toll fees will be charged upon passing through Traffic Toll Gates at any time throughout the week, provided that such fees may not exceed twenty four Dirhams (AED 24) per day for each Vehicle. This cap will not apply to taxicabs."
+    ],
+    "expected_rank": {
+      "lexical": 2,
+      "semantic": 2,
+      "hybrid": 2
+    }
+  },
+  {
+    "id": "q02",
+    "question": "Under Law No. (22) of 2006, which vehicles does the traffic toll not apply to?",
+    "reference": "Law No. (22) of 2006 does not apply to: vehicles registered with the Armed Forces carrying its number plates and logos; vehicles of the Police and Civil Defence carrying their number plates and logos; vehicles dedicated to transporting students of schools, institutes or universities; public transport buses of the RTA; and vehicles exempted by a resolution of the Executive Director.",
+    "expected_document_ids": [
+      "dlp-13"
+    ],
+    "status": "answered",
+    "answer": "The traffic toll does not apply to the following vehicles:\n- Vehicles registered with the Armed Forces carrying its number plates and logos;\n- Vehicles of the Police and Civil Defence carrying their number plates and logos;\n- Vehicles dedicated to transporting students of schools, institutes, or universities;\n- Public transport buses of the RTA;\n- Vehicles that are exempted by a resolution of the Executive Director.",
+    "cited_chunk_ids": [
+      "dlp-13-010-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-13-010-0",
+      "dlp-13-005-0",
+      "dlp-13-009-0",
+      "dlp-13-004-0",
+      "dlp-13-003-0"
+    ],
+    "contexts": [
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (10)\nThis Law will not apply to the following motor Vehicles:\n1. Vehicles registered with the Armed Forces carrying its number plates and logos;\n2. Vehicles of the Police and Civil Defence carrying their number plates and logos;\n3. Vehicles dedicated to transporting students of schools, institutes, or universities;\n4. public transport buses of the RTA; and 5. Vehicles that are exempted by a resolution of the Executive Director.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (5)\nVehicle Owners must ensure that the motor Vehicles mentioned in Article (4) above do not pass through Traffic Toll Gates without first having the Tag affixed to their Vehicles in accordance with the rules and conditions stipulated in this Law.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (9)\nThe Agency will determine the types of motor Vehicles which are permitted, and those that are not permitted, to pass through Traffic Toll Gates. Relevant information signs must be placed at the entrance of Traffic Toll Gates.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (4)\nFor the purposes of this Law, motor Vehicles are categorised into:\n1. motorcycles;\n2. light Vehicles (private/public) 3. heavy Vehicles;\n4. light buses;\n5. heavy buses;\n6. light motorised machines; and 7. heavy motorised machines.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (3)\nThe RTA will charge motor Vehicle Owners whose Vehicles use the Road network of the Emirate and pass through a Traffic Toll Gate in one direction a “Traffic Toll Fee”, whether or not the Vehicle is registered in the Emirate."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q03",
+    "question": "How much is the traffic toll charge for a light vehicle, and how much does a Traffic Toll Card cost?",
+    "reference": "The traffic toll charge for a light vehicle (public or private) is 4.00 dirhams, and a Traffic Toll Card costs 50.00 dirhams.",
+    "expected_document_ids": [
+      "dlp-237"
+    ],
+    "status": "answered",
+    "answer": "The traffic toll charge for a light vehicle (public or private) in Dubai is **4.00 Dirhams** per passage through a Traffic Toll Gate. The cost of a Traffic Toll Card is **50.00 Dirhams**. Additionally, replacing a lost or damaged Traffic Toll Card also costs **50.00 Dirhams**.",
+    "cited_chunk_ids": [
+      "dlp-237-005-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-237-005-0",
+      "dlp-178-004-0",
+      "dlp-178-011-0",
+      "dlp-237-006-0",
+      "dlp-13-003-0"
+    ],
+    "contexts": [
+      "Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law of the Emirate of Dubai\nSchedule (1)\nTraffic Toll Charges for Vehicles and Traffic Toll Card Fees SN Type of Vehicle Fee (in Dirhams) 1 Motorcycle 4.00 2 Light Vehicle (Public/Private) 4.00 3 Heavy Vehicle 4.00 4 Light Bus 4.00 5 Heavy Bus 4.00 6 Light Motorised Machine 4.00 7 Heavy Motorised Machine 4.00 8 Traffic Toll Card 50.00 9 Replacement of lost or damaged Traffic Toll Card 50.00",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (4)\nA User will be charged one hundred Dirhams (AED 100) as subscription and Tag fees, of which fifty Dirhams (AED 50) will be credited to the account of the subscriber.",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (11)\nTraffic Toll fees will be charged upon passing through Traffic Toll Gates at any time throughout the week, provided that such fees may not exceed twenty four Dirhams (AED 24) per day for each Vehicle. This cap will not apply to taxicabs.",
+      "Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law of the Emirate of Dubai\nSchedule (2)\nViolations and Fines SN Violation Fine (in Dirhams) 1 Passing through a Traffic Toll Gate without paying the prescribed charges 100.00 2 Passing through a Traffic Toll Gate with insufficient balance in the Traffic Toll Card 50.00 3 Tampering with the Traffic Toll Card or using it in a fraudulent manner 10,000.00 4 Damaging an Electronic Payment Machine or a Traffic Toll Gate 10,000.00",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (3)\nThe RTA will charge motor Vehicle Owners whose Vehicles use the Road network of the Emirate and pass through a Traffic Toll Gate in one direction a “Traffic Toll Fee”, whether or not the Vehicle is registered in the Emirate."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q04",
+    "question": "What is the fine for passing through a traffic toll gate without paying the prescribed charges?",
+    "reference": "The fine for passing through a Traffic Toll Gate without paying the prescribed charges is 100.00 dirhams.",
+    "expected_document_ids": [
+      "dlp-237"
+    ],
+    "status": "answered",
+    "answer": "The fine for passing through a traffic toll gate without paying the prescribed charges in the Emirate of Dubai is **100 Dirhams** according to the Executive Council Resolution No. (19) of 2010.\n\nThere is also a provision in the Administrative Resolution No. (311) of 2007 (not in force) that specifies a daily fine escalating with repeated violations: 100 Dirhams for the first day, 200 Dirhams for the second day, and 400 Dirhams for the third or subsequent days.\n\nAdditionally, Law No. (22) of 2006 states a general penalty for violations of the Traffic Toll Law of not less than 500 Dirhams and not more than 10,000 Dirhams, with the fine doubled upon repetition within one year, but this is a broader penalty and not specific to the toll gate passage without payment.",
+    "cited_chunk_ids": [
+      "dlp-237-006-0",
+      "dlp-178-015-0",
+      "dlp-13-013-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-237-006-0",
+      "dlp-178-015-0",
+      "dlp-237-001-0",
+      "dlp-1767-002-0",
+      "dlp-13-013-0"
+    ],
+    "contexts": [
+      "Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law of the Emirate of Dubai\nSchedule (2)\nViolations and Fines SN Violation Fine (in Dirhams) 1 Passing through a Traffic Toll Gate without paying the prescribed charges 100.00 2 Passing through a Traffic Toll Gate with insufficient balance in the Traffic Toll Card 50.00 3 Tampering with the Traffic Toll Card or using it in a fraudulent manner 10,000.00 4 Damaging an Electronic Payment Machine or a Traffic Toll Gate 10,000.00",
+      "Administrative Resolution No. (311) of 2007 Issuing the Implementing Bylaw of Law No. (22) of 2006 Concerning Traffic Toll in the Emirate of Dubai\nArticle (15)\nIrrespective of the number of repetitions of the violation on a single day, the daily fine on any Vehicle passing through Traffic Toll Gates without a Tag will be as follows:\n one hundred Dirhams (AED 100) for the first day;\n two hundred Dirhams  (AED 200) for the second day; and  four hundred Dirhams (AED 400) for the third or subsequent days.",
+      "Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law of the Emirate of Dubai\nArticle (1)\nVehicle Owners whose vehicles pass through Traffic Toll Gates in one direction will pay the fees prescribed in Schedule (1) attached hereto.",
+      "Executive Council Resolution No. (1) of 2025 Amending Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law in the Emirate of Dubai\nArticle (2): Suspension of Operation of Traffic Toll Gates\na. The RTA will suspend the operation of Traffic Toll Gates and will not collect the Traffic Toll charges from a Vehicle Owner passing through any Traffic Toll Gate between 1:00 AM and 6:00 AM.\nb. The RTA may, subject to the approval of the Executive Council, modify the Traffic Toll Gates operation suspension timing stipulated in paragraph (a) of this Article in accordance with the technical standards it adopts in this respect.",
+      "Law No. (22) of 2006 Concerning the Traffic Toll in the Emirate of Dubai\nArticle (13)\nWithout prejudice to any stricter penalty stipulated in any other legislation, a person who violates the provisions of this Law or its implementing bylaw will be punished by a fine of not less than five hundred Dirhams (AED 500.00) and not more than ten thousand Dirhams (AED 10,000.00). Upon repetition of the same violation within one (1) year, the amount of the fine will be doubled."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q05",
+    "question": "How much is the Dubai airports departure fee and which passengers are exempt from it?",
+    "reference": "The departure fee is seventy-five dirhams (AED 75.00) for every passenger departing the United Arab Emirates through Dubai airports. Exempt are: passengers below the age of two years; on-duty pilots and cabin crew; transit passengers whose arrival and departure flight number is the same; and transfer passengers whose final destination is not the United Arab Emirates and whose departure is within twenty-four hours of arrival.",
+    "expected_document_ids": [
+      "dlp-1432"
+    ],
+    "status": "answered",
+    "answer": "The Dubai Airports Departure Fee is **seventy-five dirhams (AED 75.00)** for every passenger departing the United Arab Emirates through Dubai airports. The following passengers are exempt from paying this fee:\n- Passengers below the age of two (2) years;\n- On-duty pilots and cabin crew;\n- Transit passengers whose arrival and departure flight number is the same;\n- Transfer passengers whose final destination is not the United Arab Emirates and whose departure is within twenty-four (24) hours from the time of arrival.",
+    "cited_chunk_ids": [
+      "dlp-1432-001-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1432-001-0",
+      "dlp-1432-003-0",
+      "dlp-1432-002-0",
+      "dlp-1432-006-0",
+      "dlp-1432-000-0"
+    ],
+    "contexts": [
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (1): Charging the Fee\na. A departure fee of seventy-five dirhams (AED 75.00) will be collected from every passenger departing the United Arab Emirates through Dubai airports.\nb. The following categories are hereby exempted from payment of the fee referred to in paragraph (a) of this Article:\n1. passengers below the age of two (2) years;\n2. on-duty pilots and cabin crew;\n3. transit passengers whose arrival and departure flight number is the same ; and 4. transfer passengers whose final destination is not the United Arab Emirates and whose departure is within twenty-four (24) hours from the time of arrival.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (3): Fee Payment\nThe fee collected pursuant to this Law will be paid to the Public Treasury of the Government of Dubai.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (2): Collection of the Fee\nAirlines operating in Dubai airports will be responsible for collecting the fee referred to in Article (1) of this Law upon issuing air tickets to customers within or outside of the United Arab Emirates.\nThe airlines must transfer the proceeds generated from collecting such a fee to the Corporation, in accordance with the processes, procedures, and time frames stipulated in the document stating the conditions for using airports, as adopted by the Corporation in this respect.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (6): Publication and Commencement\nThis Law will be published in the Official Gazette and will come into force on the day on which it is published.\nMohammed bin Rashid Al Maktoum Ruler of Dubai Issued in Dubai on 7 July 2022 Corresponding to 8 Thu al-Hijjah 1443 A.H.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nPreamble\nLaw No. (13) of 2022 Concerning the Dubai Airports Departure Fee1 We, Mohammed bin Rashid Al Maktoum, Ruler of Dubai, After perusal of:\nCabinet Resolution No. (10) of 2010 Concerning the Departure Fee through Sea, Air, and Land Ports of Entry of the United Arab Emirates;\nLaw No. (5) of 1995 Establishing the Department of Finance;\nLaw No. (3) of 2003 Establishing the Executive Council of the Emirate of Dubai;\nLaw No. (3) of 2004 Imposing the Dubai International Airport Departure Fee and its amendments;\nLaw No. (23) of 2007 Establishing the Dubai Airports Corporation (the “Corporation”);\nLaw No. (14) of 2009 Concerning the Pricing of Government Services in the Emirate of Dubai and its amendments; and Law No. (1) of 2016 Concerning the Financial Regulations of the Government of Dubai, Do hereby issue this Law."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q06",
+    "question": "Who collects the Dubai airports departure fee, and where is the money paid?",
+    "reference": "Airlines operating in Dubai airports collect the fee when issuing air tickets and must transfer the proceeds to the Corporation. The fee is paid to the Public Treasury of the Government of Dubai.",
+    "expected_document_ids": [
+      "dlp-1432"
+    ],
+    "status": "answered",
+    "answer": "The Dubai Airports Departure Fee is collected by airlines operating in Dubai airports when issuing air tickets to customers within or outside of the United Arab Emirates. The airlines are responsible for transferring the proceeds from this fee to the Dubai Airports Corporation according to the stipulated processes and time frames. The money collected from this fee is then paid to the Public Treasury of the Government of Dubai.",
+    "cited_chunk_ids": [
+      "dlp-1432-002-0",
+      "dlp-1432-003-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1432-003-0",
+      "dlp-1432-001-0",
+      "dlp-1432-002-0",
+      "dlp-1432-000-0",
+      "dlp-1432-006-0"
+    ],
+    "contexts": [
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (3): Fee Payment\nThe fee collected pursuant to this Law will be paid to the Public Treasury of the Government of Dubai.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (1): Charging the Fee\na. A departure fee of seventy-five dirhams (AED 75.00) will be collected from every passenger departing the United Arab Emirates through Dubai airports.\nb. The following categories are hereby exempted from payment of the fee referred to in paragraph (a) of this Article:\n1. passengers below the age of two (2) years;\n2. on-duty pilots and cabin crew;\n3. transit passengers whose arrival and departure flight number is the same ; and 4. transfer passengers whose final destination is not the United Arab Emirates and whose departure is within twenty-four (24) hours from the time of arrival.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (2): Collection of the Fee\nAirlines operating in Dubai airports will be responsible for collecting the fee referred to in Article (1) of this Law upon issuing air tickets to customers within or outside of the United Arab Emirates.\nThe airlines must transfer the proceeds generated from collecting such a fee to the Corporation, in accordance with the processes, procedures, and time frames stipulated in the document stating the conditions for using airports, as adopted by the Corporation in this respect.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nPreamble\nLaw No. (13) of 2022 Concerning the Dubai Airports Departure Fee1 We, Mohammed bin Rashid Al Maktoum, Ruler of Dubai, After perusal of:\nCabinet Resolution No. (10) of 2010 Concerning the Departure Fee through Sea, Air, and Land Ports of Entry of the United Arab Emirates;\nLaw No. (5) of 1995 Establishing the Department of Finance;\nLaw No. (3) of 2003 Establishing the Executive Council of the Emirate of Dubai;\nLaw No. (3) of 2004 Imposing the Dubai International Airport Departure Fee and its amendments;\nLaw No. (23) of 2007 Establishing the Dubai Airports Corporation (the “Corporation”);\nLaw No. (14) of 2009 Concerning the Pricing of Government Services in the Emirate of Dubai and its amendments; and Law No. (1) of 2016 Concerning the Financial Regulations of the Government of Dubai, Do hereby issue this Law.",
+      "Law No. (13) of 2022 Concerning the Dubai Airports Departure Fee\nArticle (6): Publication and Commencement\nThis Law will be published in the Official Gazette and will come into force on the day on which it is published.\nMohammed bin Rashid Al Maktoum Ruler of Dubai Issued in Dubai on 7 July 2022 Corresponding to 8 Thu al-Hijjah 1443 A.H."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q07",
+    "question": "Can an autonomous vehicle travel on a road in Dubai without being licensed by the RTA?",
+    "reference": "No. No Autonomous Vehicle may travel on a Road unless it is licensed by the RTA. An Autonomous Vehicle licensed by another licensing entity in the UAE may not travel within the Emirate without first obtaining the Permit from the RTA.",
+    "expected_document_ids": [
+      "dlp-1525"
+    ],
+    "status": "answered",
+    "answer": "An autonomous vehicle may not travel on a road in Dubai unless it is licensed by the RTA. The license is issued according to the conditions and procedures prescribed by the relevant legislation and resolutions. Additionally, if the vehicle is licensed by another UAE entity, it still requires a permit from the RTA to travel within Dubai. Therefore, traveling without RTA licensing is not permitted.\n\nTo be licensed, an autonomous vehicle must meet several conditions including being sourced from an authorized local agent, passing technical inspection, meeting safety and security standards, and being insured as prescribed by the RTA.\n\nFurthermore, during the third phase of autonomous vehicle operation, operators must obtain the relevant permit from the RTA before operating autonomous vehicles.",
+    "cited_chunk_ids": [
+      "dlp-1525-006-0",
+      "dlp-1525-008-0",
+      "dlp-1939-006-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1525-006-0",
+      "dlp-1939-007-1",
+      "dlp-1939-007-0",
+      "dlp-1525-008-0",
+      "dlp-1525-016-0",
+      "dlp-1939-006-0"
+    ],
+    "contexts": [
+      "Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (6): Using Autonomous Vehicles and Conducting Activities\na. No Autonomous Vehicle may travel on a Road unless it is licensed by the RTA. The licence will be issued in accordance with the conditions and procedures prescribed by the legislation in force, including this Law and the resolutions issued in pursuance hereof.\nb. No Person may conduct an Activity in the Emirate without first obtaining a Permit. The Permit will be issued in accordance with the conditions and procedures prescribed by the relevant resolutions of the Director General.\nc. An Autonomous Vehicle licensed by a concerned licensing entity in the UAE, other than the RTA, pursuant to the legislation regulating the use of Autonomous Vehicles may not travel within the Emirate without first obtaining the Permit referred to in paragraph (b) of this Article.",
+      "Executive Council Resolution No. (14) of 2026 Approving the Activities Related to the Use of Autonomous Vehicles and their Operational Phases in the Emirate of Dubai\nArticle (7): Using Autonomous Vehicles for Personal Purposes\n4. comply with the safety requirements and standards approved by the RTA for the use of Autonomous Vehicles;\n5. immediately notify the RTA of any malfunctions in the Autonomous Driving System; and 6. fulfil any other obligations determined pursuant to the relevant resolution of the Director General.\nd. Where the Autonomous Driving System is not activated, the Autonomous Vehicle will be registered and licensed as a conventional Vehicle in accordance with the conditions and procedures prescribed for the registration and licensing of Vehicles under the relevant legislation applicable to the RTA.\ne. In any event, the owner of the Autonomous Vehicle must submit an undertaking to the RTA not to activate the Autonomous Driving System after the registration and licensing of the Vehicle without first obtaining the RTA’s approval, and to bear legal liability for any damage arising out of the activation of that system without that approval.",
+      "Executive Council Resolution No. (14) of 2026 Approving the Activities Related to the Use of Autonomous Vehicles and their Operational Phases in the Emirate of Dubai\nArticle (7): Using Autonomous Vehicles for Personal Purposes\na. An individual who owns an Autonomous Vehicle intended for personal use must not activate the Autonomous Driving System except during the Third Phase of the operation of Autonomous Vehicles, and only after obtaining the relevant approval of the RTA.\nb. An Autonomous Vehicle may only be used in accordance with paragraph (a) of this Article if, at the time of its initial registration in the Emirate, the Vehicle was supplied by the approved local Agent for that specific type of Vehicle.\nc. Where the RTA approves the activation of the Autonomous Driving System, the owner of the Autonomous Vehicle must:\n1. activate the Autonomous Driving System in coordination with, or under the direct supervision of the Agent;\n2. use the Autonomous Vehicle on the Roads and lanes, and in the areas, specified by the RTA;\n3. where a child is on board, ensure that the child is accompanied by another person, subject to the age requirements prescribed for the child and the accompanying person by resolution of the Director General;\n4. comply with the safety requirements and standards approved by the RTA for the use of Autonomous Vehicles;",
+      "Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (8): Requirements for Licensing Autonomous Vehicles\nTo be licensed, an Autonomous Vehicle must:\n1. be sourced from the authorised local Agent for that type of Autonomous Vehicles in the Emirate, at the time of initial registration;\n2. be registered in its source country or country of origin, and have a proven record of use on the public Roads designated for its category and type in that country;\n3. pass the technical inspection prescribed by the RTA;\n4. be equipped to read and respond to Traffic Signs, and capable of responding to Road priorities and travelling on Roads;\n5. meet the security and safety standards and specifications, and be equipped with the systems required to interact with Roads and their users in accordance with the relevant guidelines adopted by the RTA;\n6. conform to the specifications approved in the UAE;\n7. be insured with an insurance company licensed to operate in the UAE, as prescribed by the Director General in this respect; and 8. meet any other conditions determined pursuant to the relevant resolutions issued by the Director General.",
+      "Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (16): Sale and Transfer of Ownership of Autonomous Vehicles\nAutonomous Vehicles may be sold to Operators only by the authorised Agents. The ownership of an Autonomous Vehicle may not be transferred from an Operator to another without first obtaining the relevant approval of the RTA. This approval will be issued in accordance with the relevant requirements and procedures prescribed by the RTA.",
+      "Executive Council Resolution No. (14) of 2026 Approving the Activities Related to the Use of Autonomous Vehicles and their Operational Phases in the Emirate of Dubai\nArticle (6): Obligations of Operators during the Third Phase\nDuring the Third Phase of the operation of Autonomous Vehicles, an Operator must:\n1. not operate Autonomous Vehicles without first obtaining the relevant Permit;\n2. comply with the operational standards and performance and safety indicators specified by the RTA for Autonomous Vehicles;\n3. provide the RTA with an undertaking that Autonomous Vehicles will not obstruct traffic or compromise the safety of Road Users during its operation;\n4. provide the RTA and the Competent Entities in the Emirate, upon request, with the necessary data and information related to the operation of Autonomous Vehicles; and 5. fulfil any other obligations determined pursuant to the relevant resolution of the Director General."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q08",
+    "question": "Who is liable for damage caused by an autonomous vehicle?",
+    "reference": "The Operator is liable for compensating for any damage to property or harm to individuals caused by the Autonomous Vehicle, without prejudice to the Operator's right of recourse against the person actually responsible. The RTA is not liable to third parties for damage they sustain as a result of using Autonomous Vehicles.",
+    "expected_document_ids": [
+      "dlp-1525"
+    ],
+    "status": "answered",
+    "answer": "The Operator of an Autonomous Vehicle is liable for compensating any damage to property or harm to individuals caused by the Autonomous Vehicle. The Operator has the right to seek recourse against the person actually responsible for the damage according to general liability rules. The Roads and Transport Authority (RTA) is not liable to third parties for any damage resulting from the use of Autonomous Vehicles. This liability framework is established under Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai, Article 14. Additionally, the Operator has several obligations related to the operation, maintenance, and safety of the Autonomous Vehicle to ensure compliance and safe operation, as detailed in the Implementing Bylaw of the same law.",
+    "cited_chunk_ids": [
+      "dlp-1525-014-0",
+      "dlp-1872-014-0",
+      "dlp-1872-014-1",
+      "dlp-1872-014-2"
+    ],
+    "context_chunk_ids": [
+      "dlp-1525-014-0",
+      "dlp-1718-040-0",
+      "dlp-1525-015-0",
+      "dlp-1918-021-0",
+      "dlp-1872-014-1",
+      "dlp-1872-014-0",
+      "dlp-1872-014-2"
+    ],
+    "contexts": [
+      "Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (14): Civil Liability for Remedy of Damage\na. An Operator will be liable for compensating for any damage to property or harm to individuals caused by the Autonomous Vehicle. This will not prejudice the right of the Operator to take recourse against the Person  actually responsible for the damage, in accordance with the general rules of liability prescribed in this respect.\nb. The RTA will not be liable to third parties for any damage they may sustain as a result of using Autonomous Vehicles.",
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (40): Damage Compensation\na. A Person who causes damage as a result of conducting Operations and Related Activities will be liable for compensation for that damage.\nb. A Person who causes damage must remedy the violation that caused that damage within the time frame prescribed by the DCAA. Where this Person fails to remedy, or delays in remedying, the violation, the DCAA may remedy the violation by itself or by engaging any other entity;\nand hold the violator liable for all costs incurred in addition to administrative charges of twenty percent (20%) of these costs.\nChapter Ten Final Provisions",
+      "Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (15): Criminal Liability\nThe provisions of the legislation in force in the Emirate, including the above-mentioned Federal Law No. (21) of 1995 and Federal Law by Decree No. (31) of 2021, will apply to the acts committed by Autonomous Vehicles and constituting crimes punishable by the penalties prescribed for their perpetrators under such legislation.",
+      "Executive Council Resolution No. (1) of 2026 Regulating the Activity of Technical Inspection of Vehicles in the Emirate of Dubai\nArticle (21): Exemption from Liability\nThe RTA will not be liable to third parties for any damage that they may suffer as a result of the Activity being conducted at or through a Centre, or by a Permit Holder.",
+      "Administrative Resolution No. (939) of 2025 Issuing the Implementing Bylaw of Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (14): Obligations of Operators\nand submit a report to the RTA detailing the repairs carried out and the cause of the damage or malfunction, where it relates to the Autonomous Driving System, together with a technical report certifying that the Autonomous Vehicle is fit to resume operation;\n8. not perform any modification, upgrade, or update of any aspect of the Autonomous Driving System, operational design domain, or electronic applications of an Autonomous Vehicle without first obtaining the relevant approval of the RTA;\n9. comply with the protocols and procedures approved by the Competent Entity in all matters relating to accident scene management and the removal of Vehicles from the accident scene;\n10. provide an integrated electronic system for storing the operational data of the Autonomous Vehicle, including its movement and travel data, maintenance and repair records, accidents and malfunctions it has experienced, and any other data specified by the RTA.\nThis data must be stored securely and may not be amended, deleted, or used for any purpose other than operational purposes without first obtaining the approval of the RTA;",
+      "Administrative Resolution No. (939) of 2025 Issuing the Implementing Bylaw of Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (14): Obligations of Operators\nIn addition to the obligations prescribed in the Law, an Operator must:\n1. immediately notify the RTA of any emergency malfunctions in the Autonomous Vehicle’s Autonomous Driving System;\n2. take the necessary measures to manage mechanical failures, respond to emergency situations, and deal with any commands issued by the Autonomous Driving System that require direct intervention;\n3. fully comply with safety requirements and standards approved by the RTA and the Competent Entity;\n4. operate the Autonomous Vehicle within the lanes and zones designated by the RTA, without deviating from those designated lanes and zones;\n5. regain control of the Autonomous Vehicle without delay in the event of any loss of control or the occurrence of any malfunction that compromises its safe operation;\n6. ensure the presence of an adult in the vehicle when children under the age of sixteen (16) are inside;\n7. repair the Autonomous Vehicle in the event of any malfunction or damage resulting from traffic accidents or any other cause at any maintenance workshop accredited by the Agent;",
+      "Administrative Resolution No. (939) of 2025 Issuing the Implementing Bylaw of Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai\nArticle (14): Obligations of Operators\nand 11. ensure the provision of timely and secure updates for the Autonomous Vehicle’s software so as to maintain its operational readiness to ensure continued safe operation and compliance with the prescribed safety requirements.\nAdministrative Resolution No. (939) of 2025 Issuing the Implementing Bylaw of Law No. (9) of 2023 Regulating the Operation of Autonomous Vehicles in the Emirate of Dubai Page 8 of 8"
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q09",
+    "question": "What are the peak hours on weekdays during which the parking fee applies?",
+    "reference": "On weekdays (Monday to Saturday) the peak hours are from 8:00 a.m. to 10:00 a.m. and from 4:00 p.m. to 8:00 p.m.",
+    "expected_document_ids": [
+      "dlp-1941"
+    ],
+    "status": "answered",
+    "answer": "The peak hours on weekdays (Monday to Saturday) during which the parking fee applies in the Emirate of Dubai are:\n- From 8:00 a.m. to 10:00 a.m.\n- From 4:00 p.m. to 8:00 p.m.\nThese hours are specified in Administrative Resolution No. (363) of 2026 concerning the rules for designating peak hours for parking fees.",
+    "cited_chunk_ids": [
+      "dlp-1941-002-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1941-002-0",
+      "dlp-1941-003-0",
+      "dlp-1817-006-0",
+      "dlp-1767-007-0",
+      "dlp-1817-002-2",
+      "dlp-1817-002-0",
+      "dlp-1817-002-1"
+    ],
+    "contexts": [
+      "Administrative Resolution No. (363) of 2026 Concerning the Rules and Criteria for Designating Peak Hours, Premium Public Car Park Locations, Event Locations and Public Car Parks Adjacent Thereto\nArticle (2): Designation of Peak Hours\nThe peak hours during which the Parking Fee applies are as follows:\n1. On Weekdays (Monday to Saturday): From 8:00 a.m. to 10:00 a.m. and from 4:00 p.m. to 8:00 p.m.\n2. During the Holy Month of Ramadan (Monday to Saturday): From 8:00 a.m. to 10:00 a.m. and from 1:00 p.m. to 5:00 p.m.\n3. The RTA is required to coordinate with the General Secretariat of the Executive Council and the Department of Finance if it decides to change the peak hours during which the Parking Fee applies. Any such changes must be made in accordance with the criteria set out in Article (6) of this Resolution and must be submitted to the Director General for approval pursuant to a resolution he issues in this respect.",
+      "Administrative Resolution No. (363) of 2026 Concerning the Rules and Criteria for Designating Peak Hours, Premium Public Car Park Locations, Event Locations and Public Car Parks Adjacent Thereto\nArticle (3): Off-Peak Hours\nThe off-peak hours during which the Parking Fee applies are as follows:\n1. On Weekdays (Monday to Saturday): From 10:00 a.m. to 4:00 p.m. and from 8:00 p.m. to 10:00 p.m.\n2. During the Holy Month of Ramadan (Monday to Saturday): From 10:00 a.m. to 1:00 p.m., from 5:00 p.m. to 6:00 p.m., and from 8:00 p.m. to 12:00 midnight.",
+      "Executive Council Resolution No. (46) of 2025 Amending Executive Council Resolution No. (5) of 2016 Regulating Car Parks in the Emirate of Dubai\nSchedule (1)\nParking Fees for Category One and Category Two Car Parks Parking Fees for Category One Car Parks (in dirhams) Parking Duration On-street Car Parks Off-street Car Parks Outside Peak Hours During Peak Hours Premium Car Parks (During Peak Hours) Outside Peak Hours During Peak Hours Premium Car Parks (During Peak Hours) Half an hour 2.00 2.00 3.00 - - - One (1) hour 4.00 4.00 6.00 3.00 4.00 6.00 Two (2) hours 8.00 8.00 12.00 6.00 8.00 12.00 Three (3) hours 12.00 12.00 18.00 9.00 12.00 18.00 Four (4) hours 16.00 16.00 24.00 12.00 16.00 24.00 Five (5) hours - - - 15.00 20.00 30.00 Twenty- four (24) hours - - - 30.00 30.00 40.00 Parking Fees for Category Two Car Parks (in dirhams) Parking Duration On-street Car Parks Off-street Car Parks Outside Peak Hours During Peak Hours Premium Car Parks (During Peak Hours) Outside Peak Hours During Peak Hours Premium Car Parks (During Peak Hours) One (1) hour 2.00 4.00 6.00 2.00 4.00 6.00 Two (2) hours 5.00 8.00 12.00 4.00 8.00 12.00 Three (3) hours 8.00 12.00 18.00 5.00 12.00 18.00 Four (4) hours 11.00 16.00 24.00 7.00 16.00 24.00 Twenty- four (24) hours - - - 20.00 20.00 30.00",
+      "Executive Council Resolution No. (1) of 2025 Amending Executive Council Resolution No. (19) of 2010 Approving the Fees and Fines Prescribed by the Traffic Toll Law in the Emirate of Dubai\nSchedule (1)\nTraffic Toll Charges and Tag Fees Traffic Toll Tag Fees SN Service Fee (in dirhams) 1 Issuing a Traffic Toll Tag 50 2 Issuing a replacement for a lost or damaged Traffic Toll Tag:\n50 Traffic Toll Charges SN Day Period Charges (in dirhams) 3 Weekdays, except Sundays During Peak Hours 6 Outside Peak Hours 4 4 Sundays Throughout the day 4",
+      "Executive Council Resolution No. (46) of 2025 Amending Executive Council Resolution No. (5) of 2016 Regulating Car Parks in the Emirate of Dubai\nArticle (1): Definitions\nPermit:\nAny of the permits issued by the TRA under this Resolution.\nPeak Hours:\nThe period during which traffic volume in the Emirate reaches its maximum permitted limit. This period will be determined in accordance with the controls and criteria approved by the Director General, in coordination with the General Secretariat of the Executive Council and the Department of Finance.\nEvent:\nAny event organised in the Emirate, whether on a permanent or temporary basis, for entertainment, marketing, sports, arts, cultural, educational, tourist, health, religious, or any other purposes. An Event may take the form of a conference, festival, exhibition, concert, theatrical performance, literary reading, contest, or any other form;\nand may result in an increase in traffic beyond normal levels in the surrounding area. Events and their designated locations will be determined pursuant to a decision issued by the Director General, in coordination with the General Secretariat of the Executive Council and the Department of Finance.\nPerson:\nA natural or legal person.",
+      "Executive Council Resolution No. (46) of 2025 Amending Executive Council Resolution No. (5) of 2016 Regulating Car Parks in the Emirate of Dubai\nArticle (1): Definitions\nThe following words and expressions, wherever mentioned in this Resolution, will have the meaning indicated opposite each of them unless the context implies otherwise:\nUAE:\nThe United Arab Emirates.\nEmirate:\nThe Emirate of Dubai.\nExecutive Council:\nThe Executive Council of the Emirate of Dubai.\nRTA:\nThe Roads and Transport Authority.\nDirector General:\nThe director general and chairman of the Board of Executive Directors of the RTA.\nTRA:\nThe Traffic and Roads Agency of the RTA.\nGovernment Entity:\nAny of the ministries, Government departments, public agencies or corporations, Government councils, public authorities, or other entities affiliated to the Federal Government or the Government of Dubai.\nVehicle:\nAny motorised machine, pedal cycle, motorcycle, carriage, or other machine designed to run on Roads, whether mechanically propelled or otherwise.\nPublic Car Park:\nAn area within the Emirate supervised by the RTA and designated under planning and construction legislation for Vehicles to park in, whether for a fee or free of charge. This includes on-street car parks, off-street car parks, and multi-storey car parks.\nPremium Car Park:",
+      "Executive Council Resolution No. (46) of 2025 Amending Executive Council Resolution No. (5) of 2016 Regulating Car Parks in the Emirate of Dubai\nArticle (1): Definitions\nPremium Car Park:\nA Public Car Park with special characteristics in terms of its location, level of service, or the Parking Fees collected for its use by Vehicles;\nand located within high-density residential areas, business districts, or areas near public transport stations. Premium Car Park will be designated in accordance with the controls and criteria approved by the Director General, in coordination with the General Secretariat of the Executive Council and the Department of Finance.\nPrivate Car Park:\nAn area that may, under planning and construction legislation, be used as a private car park by any Person or entity authorised by the RTA in accordance with this Resolution, whether with or without consideration.\nParking Fee:\nA fee charged under this Resolution for parking a Vehicle in a Public Car Park for a specific period.\nReservation Fee:\nA fee charged under this Resolution for the reservation of a Public Car Park space for a specific period.\nPermit:\nAny of the permits issued by the TRA under this Resolution.\nPeak Hours:"
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q10",
+    "question": "What is the fine for operating a water taxi without an authorisation from the RTA?",
+    "reference": "The fine for operating a Water Taxi without an authorisation from the RTA is 2,000.00 dirhams.",
+    "expected_document_ids": [
+      "dlp-236"
+    ],
+    "status": "answered",
+    "answer": "The fine for operating a water taxi without an authorisation from the RTA in Dubai is **2,000 Dirhams**. This is specified under the violations and fines related to water taxi operators in Executive Council Resolution No. (18) of 2010 Regulating the Operation of Water Taxis in the Emirate of Dubai.",
+    "cited_chunk_ids": [
+      "dlp-236-013-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-236-013-0",
+      "dlp-191-014-0",
+      "dlp-191-014-1",
+      "dlp-236-006-0",
+      "dlp-236-014-0",
+      "dlp-191-005-0"
+    ],
+    "contexts": [
+      "Executive Council Resolution No. (18) of 2010 Regulating the Operation of Water Taxis in the Emirate of Dubai\nSchedule (2)\nViolations and Fines Related to Water Taxi Operators SN Violation Fine (in Dirhams) 1 Operating a Water Taxi without an authorisation from the RTA 2,000.00 2 Using a Water Taxi for other than the purposes stated in its licence 1,000.00 3 Failure to use the Stations approved by the RTA for passenger embarkation or disembarkation on Regular Trips 1,000.00 4 Failure to maintain a Water Taxi in accordance with the approved maintenance plans and schedules 2,000.00 5 Failure to maintain the internal or external cleanliness of a Water Taxi 500.00 6 Transporting hazardous materials in a Water Taxi 2,000.00 7 Non-compliance with the instructions of the PTA employees responsible for auditing and inspecting the operation of Water Taxis 500.00 8 Failure by a Water Taxi staff member to wear the uniform approved by the PTA 500.00 9 Making any modification to a Water Taxi without prior written permit from the PTA.\n1,000.00 10 Non-compliance by a Water Taxi operator with the maximum number of passengers allowed 2,000.00 11 Mistreatment of passengers 500.00 12 Non-compliance with the prescribed speed limits 2,000.00",
+      "Regulation No. (2) of 2007 Regulating the Operation of Water Buses on Dubai Creek\nSchedule (1)\nViolations and Fines Related to Water Bus Operators SN Violation Fine (in Dirhams) Additional Penalty 1 Operating an unlicensed or unregistered Water Bus, or operating a Water Bus without registration documents or licence 500.00 Suspension of the operation of the Water Bus 2 Operating a Water Bus by a person who does not hold a recognised skipper’s licence 500.00 - 3 Operating a Water Bus without a number plate 500.00 Suspension of the operation of the Water Bus 4 Operating a Water Bus more than one (1) month after expiry of the skipper’s licence or Water Bus registration documents 300.00 - 5 Illegibility of Water Bus number plate 200.00 - 6 Failure to produce the original skipper’s licence or original registration documents upon request 200.00 - 7 Using a Water Bus for other than the purposes stated in its licence 500.00 - 8 Failure to follow routes between Stations, or allowing passengers to embark on or disembark from a Water Bus at locations other than the approved Stations 500.00 - 9 Obstructing navigation on Dubai Creek 300.00 - 10 Negligence in the internal or external maintenance or cleanliness of Water Buses 200.00 - 11 Using Water Buses for fishing 200.00 - 12 Emission of",
+      "Regulation No. (2) of 2007 Regulating the Operation of Water Buses on Dubai Creek\nSchedule (1)\n10 Negligence in the internal or external maintenance or cleanliness of Water Buses 200.00 - 11 Using Water Buses for fishing 200.00 - 12 Emission of black smoke from a Water Bus’s engine or exhaust 500.00 - 13 Failure to outfit a Water Bus with headlights, or failure to maintain safety equipment, such as life buoys, fire extinguishers, first aid kits, and hand torches 1,000.00 - 14 Loading any hazardous or combustible materials on board a Water Bus 600.00 - 15 Non-compliance with the instructions and directives of inspectors or competent officers 500.00 - 16 Non-compliance by a Water Bus skipper or his assistant with the uniform 500.00 - 17 Failure by a Water Bus skipper or his assistant to display his identification card 200.00 - 18 Making any modification to a Water Bus without prior written authorisation from the RTA 500.00 -",
+      "Executive Council Resolution No. (18) of 2010 Regulating the Operation of Water Taxis in the Emirate of Dubai\nArticle (6)\nIn addition to the penalty of a fine prescribed under this Resolution, a violating party will be liable for compensation for any damage to a Water Taxi, equipment, devices, or Stations, in addition to a twenty five percent (25%) of the amount of damages as administrative fees. The RTA assessment of such damages will be final.",
+      "Executive Council Resolution No. (18) of 2010 Regulating the Operation of Water Taxis in the Emirate of Dubai\nSchedule (3)\nViolations and Fines Related to Water Taxi Passengers SN Violation Fine (in Dirhams) 1 Smoking in a Water Taxi 500.00 2 Tampering with, or causing partial or total damage to a Water Taxi equipment 2,000.00 3 Acting or behaving in a manner that may cause distraction to a Water Taxi skipper or obstruct his vision while operating the Water taxi 1,000.00 4 Performing any act that may result in littering a Water Taxi or Station 1,000.00 5 Committing a rude or indecent act in a Water Taxi or Station 1,000.00",
+      "Regulation No. (2) of 2007 Regulating the Operation of Water Buses on Dubai Creek\nArticle (5)\n1. The RTA will charge the following fees:\n- a Water Bus registration fee of nine thousand Dirhams (AED 9,000.00); and - a Fare card issuance fee as prescribed in the implementing bylaw of this Regulation.\nThe implementing bylaw of this Regulation will determine the methods of collecting the above- mentioned fees.\n2. The Fare per passenger for transport by Water Bus will be as follows:\n- four Dirhams (AED 4.00) per one-way trip between two Stations; or - twenty-five Dirhams (AED 25.00) per tourist round trip.\nThe RTA may, in accordance with the rules and standards adopted by it, increase the Fare without exceeding the approved Fare limit."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q11",
+    "question": "Is a permit required to pilot or use an unmanned aircraft in Dubai, and who issues it?",
+    "reference": "Yes. No person may pilot or use Unmanned Aircraft in the Emirate without first obtaining the relevant Permit from the DCAA (Dubai Civil Aviation Authority).",
+    "expected_document_ids": [
+      "dlp-1718"
+    ],
+    "status": "answered",
+    "answer": "A permit is required to pilot or use an unmanned aircraft in Dubai. This permit must be obtained from the Dubai Civil Aviation Authority (DCAA) before piloting, using, conducting operations, or related activities involving unmanned aircraft in the Emirate. The DCAA also considers risk assessments, the purpose of use, and the area of operation when issuing such permits to ensure safety and security. Additionally, permits are required for operating unmanned aircraft, assisting in their operation, or performing related work, and these permits are issued by the DCAA based on qualifications and specific categories determined by the Director General. Permits are also required for establishing infrastructure, airports, or supplying fuel for unmanned aircraft, all issued by the DCAA in coordination with relevant entities like the Dubai Aviation Engineering Projects Corporation.",
+    "cited_chunk_ids": [
+      "dlp-1718-010-0",
+      "dlp-1718-018-0",
+      "dlp-1718-020-0",
+      "dlp-1718-021-0",
+      "dlp-1718-023-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1718-010-0",
+      "dlp-1718-021-0",
+      "dlp-1718-018-0",
+      "dlp-1718-020-0",
+      "dlp-1718-023-0"
+    ],
+    "contexts": [
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (10): Obtaining Permits\na. No Person may pilot or use Unmanned Aircraft; conduct Operations or Related Activities; or construct any Infrastructure or Unmanned Aircraft Airport in the Emirate, without first obtaining the relevant Permit from the DCAA. The resolutions issued in implementation of this Law will determine the conditions and requirements for issuing such a Permit.\nb. When issuing the Permit referred to in paragraph (a) of this Article, the assessment of risks resulting from the operation of Unmanned Aircraft; the purpose of using them; the area where they will be used; and any other considerations the DCAA deems necessary must be taken into account to ensure the safety of air navigation and security of Operations.",
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (21): Establishing and Operating Unmanned Aircraft Airports\nNo Person may establish or operate Unmanned Aircraft Airports or make any modification thereto without first obtaining the relevant Permit from the DCAA. This Permit will be issued in coordination with the Dubai Aviation Engineering Projects Corporation and the concerned entities as per the relevant conditions and requirements approved by the DCAA and these entities.",
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (18): Persons Authorised to Control Unmanned Aircraft\na. No Person may operate, assist in operating, or monitor the operation of Unmanned Aircraft or perform any work related to their operating systems unless that Person is qualified to do so and holds a relevant Permit from the DCAA.\nb. The Director General will, pursuant to a resolution he issues in this respect and based on the type of Unmanned Aircraft and their control systems, determine the categories of, and the requirements and procedures for issuing, the Permit referred to in paragraph (a) of this Article for an Unmanned Aircraft Pilot, a Controller, or a Crew Member.",
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (20): Establishment of Infrastructure\nThe Infrastructure required for conducting Unmanned Aircraft Operations may not be established without first obtaining the relevant Permit from the DCAA. This Permit will be issued in coordination with the Dubai Aviation Engineering Projects Corporation and the concerned entities as per the relevant conditions and requirements approved by the DCAA and these entities.",
+      "Law No. (4) of 2020 Regulating Unmanned Aircraft in the Emirate of Dubai\nArticle (23): Fuel and Power Supply\nNo entity may supply Unmanned Aircraft with fuel or power without first obtaining the relevant Permit from the DCAA. This Permit will be issued in coordination with the Dubai Aviation Engineering Projects Corporation and the concerned entities as per the relevant conditions and requirements approved by the DCAA and these entities."
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  },
+  {
+    "id": "q12",
+    "question": "What is the fine for a driving instruction establishment that conducts the activity without a permit?",
+    "reference": "The fine for an Establishment conducting the driving instruction Activity without a Permit is 10,000 dirhams.",
+    "expected_document_ids": [
+      "dlp-1915"
+    ],
+    "status": "answered",
+    "answer": "The fine for a driving instruction establishment that conducts the activity without a permit in Dubai is **10,000 dirhams**.",
+    "cited_chunk_ids": [
+      "dlp-1915-010-0"
+    ],
+    "context_chunk_ids": [
+      "dlp-1915-010-0",
+      "dlp-1915-010-1",
+      "dlp-1915-010-4",
+      "dlp-1915-011-0",
+      "dlp-1915-011-1",
+      "dlp-1918-027-0",
+      "dlp-1918-027-1",
+      "dlp-1918-027-2",
+      "dlp-1918-027-3",
+      "dlp-1915-010-2",
+      "dlp-1915-010-3"
+    ],
+    "contexts": [
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (2)\nViolations and Fines of Establishments SN Violation Fine (in dirhams) 1 Conducting the Activity without a Permit 10,000 2 Conducting the Activity with an expired Permit 5,000 3 Assignment by the owner of an Establishment of his Permit, adding a partner to the Establishment, selling or leasing out the Establishment to others, or undertaking any other legal disposition of the Establishment, without first obtaining the relevant written approval of the Agency 5,000 4 Failure to comply with the training service level indicators prescribed by the Agency 2,000 5 Failure to comply with the instructions, resolutions, policies, procedures, and regulations issued by the Agency or the RTA 2,000 6 Failure to comply with the instructional and training material and training programmes approved by the Agency or with the knowledge test or instruction requirements 2,000 7 Employment by an Establishment of a Trainer or an Instructor who does not hold a Permit from the Agency 1,000 8 Failure to comply with the health, safety, and environmental requirements and conditions adopted by the RTA 2,000 9 Conducting the Activity using a Training Vehicle which is not owned by the Establishment 5,000 10 Leasing",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (2)\nand conditions adopted by the RTA 2,000 9 Conducting the Activity using a Training Vehicle which is not owned by the Establishment 5,000 10 Leasing a Training Vehicle to third parties 5,000 11 Failure by an Establishment to meet the security and safety requirements prescribed for each category of Training Vehicles 2,000 12 Failure by an Establishment to park, after working hours, any of its Vehicles within its premises or in the parking spaces designated for it by the Agency 2,000 13 Failure to use the standard contracts approved by the Agency when contracting with Learners 1,000 14 Failure by an Establishment to comply with the service fee scheme prescribed by the RTA 2,000 15 Failure to maintain records containing all the data, statistics, and documents related to its instructional Activity in accordance with the regulations adopted by the RTA, or failure to make these records accessible to RTA employees 2,000 16 Failure to comply with the categories, specifications, and number of Vehicles prescribed for an Establishment by the Agency 3,000 17 Failure to provide an insurance policy, issued by an insurance company licensed in the UAE, in accordance with the requirements approved",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (2)\n; or to provide adequate lighting during night training sessions 2,000 30 Licensing the Vehicles of the Establishment outside the Emirate, regardless of their intended purposes 2,000 31 Failure to comply with the technical requirements adopted by the Agency for occupying certain Technical Positions within an Establishment 1,000 32 Failure to affix to each Training Vehicle a signboard displaying clearly and legibly the name and logo of the Establishment and stating that it is a driving instruction Vehicle 200 33 Failure to comply with the resolutions or instructions issued by the Agency in respect of conducting the Activity 200",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (3)\nViolations and Fines of Trainers and Instructors SN Violation Fine (in dirhams) 1 Failure to carry the required Permits during driving training sessions or theory lessons, or to produce such Permits to the RTA employees upon request 250 2 Failure to comply with the instructional and training courses approved by the Agency 1,000 3 Failure to comply with the areas, Roads, and times designated by the Agency for conducting the Activity 200 4 Failure to wear the uniform prescribed for Trainers or Instructors or to maintain an appropriate general appearance 200 5 Using a Vehicle that is not authorised by the Agency as a Training Vehicle 500 6 Training a Learner who does not hold a valid Learner permit issued by the Agency 500 7 Use of a telephone by a Trainer during training, or failure to take the necessary action to prevent a Learner from using the telephone while driving 400 8 Failure by a Trainer to fasten his seat belt or to ensure that the Learner fastens his seat belt during driving training 400 9 Eating, drinking, smoking, reading newspapers or magazines, sleeping, or diverting his attention away from the Learner during driving training 300 10 Failure to meet the requirements",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (3)\nnewspapers or magazines, sleeping, or diverting his attention away from the Learner during driving training 300 10 Failure to meet the requirements adopted by the Agency for delivering driving training 300 11 Training a number of Learners that exceeds the number prescribed by the Agency 200 12 Placing any material on the front, rear, or side windows of a Training 150 Vehicle during driving training in a manner that obstructs the vision of the Learner 13 Failure to cooperate with the competent RTA employees to enable them to perform their duties 500 14 Failure to comply with the resolutions and instructions issued by the Agency in respect of Trainers and Instructors 200",
+      "Executive Council Resolution No. (1) of 2026 Regulating the Activity of Technical Inspection of Vehicles in the Emirate of Dubai\nSchedule (2)\nViolations and Fines SN Violation Fine (in dirhams) 1 Conducting the Activity in the Emirate without obtaining a Permit 5,000 2 Providing a service other than those specified in the Permit issued for operating the Centre 1,000 3 Establishing or operating an additional Centre before obtaining a Permit 5,000 4 Failure to comply with any of the terms of the Permit or the contract 500 5 Failure to follow the technical inspection procedures or standards approved by the RTA 100 6 Failure to follow customer service standards or to process customer complaints, in accordance with the standards approved by the RTA 200 7 Failure to maintain the cleanliness of Inspection Lanes, the equipment used in the Centre, or any of the Centre Facilities 300 8 Allowing Centre staff to eat, drink, smoke, read newspapers and magazines, use smartphones, or sleep while providing services 100 9 Advertising, marketing, or promoting any products or services without first obtaining the approval of the RTA 500 10 Failure by a Service Provider to comply with the quality standards and safety requirements approved by the RTA for the Centre 500 11 Failure to comply with the standards, procedures, or requirements",
+      "Executive Council Resolution No. (1) of 2026 Regulating the Activity of Technical Inspection of Vehicles in the Emirate of Dubai\nSchedule (2)\nquality standards and safety requirements approved by the RTA for the Centre 500 11 Failure to comply with the standards, procedures, or requirements approved for conducting the Activity or for processing applications 500 12 Failure to organise Vehicle parking in front of or within Inspection Lanes or in the parking area for Vehicles after inspection 500 13 Driving customers’ Vehicles into the Inspection Lanes by an unauthorised person or a person who does not hold a valid Driver's Licence for at least the same Vehicle category 500 14 Failure to provide the machines and equipment required for inspecting Vehicles 500 15 Failure by a Permit Holder to wear the uniform approved by the RTA 100 16 Failure to issue a Permit Holder with an identification card or failure by a Permit Holder to carry the card during official working hours 100 17 Using Electronic Systems or entering unauthorised premises without authorisation or without prior permission from the Agency 500 18 Imposing or collecting any additional fees or charges for technical inspection other than those stipulated in federal legislation or the legislation in force in the Emirate, including this Resolution and the resolutions",
+      "Executive Council Resolution No. (1) of 2026 Regulating the Activity of Technical Inspection of Vehicles in the Emirate of Dubai\nSchedule (2)\nother than those stipulated in federal legislation or the legislation in force in the Emirate, including this Resolution and the resolutions issued in pursuance hereof 1,000 19 Obstructing the work of the RTA's employees or authorised representatives 500 20 Negligence or failure by Centre staff to enter the correct application details into the Electronic Systems 100 21 Failure to comply with the policies, circulars, instructions, orders, and resolutions issued by the RTA regarding the conduct of the Activity, including adherence to working days and hours, displaying the approved service fees and charges in a clear and legible manner, and notifying the RTA upon ceasing the Activity 500 22 Making any modification, change, or addition to the Centre or to any of the Centre Facilities without first obtaining the approval of the RTA 500 23 Conducting the Activity with an expired Permit after thirty (30) days have elapsed since its expiry date 500 24 Failure to maintain the records, data, documents, statistics, and reports related to inspection, registration, and licensing activities, in accordance with the procedures approved by the RTA",
+      "Executive Council Resolution No. (1) of 2026 Regulating the Activity of Technical Inspection of Vehicles in the Emirate of Dubai\nSchedule (2)\n; or failure to make them accessible to the RTA’s employees 500 25 Recklessly driving a Vehicle through an Inspection Lane by a Centre employee 250 26 Engaging any person not authorised by the Agency to perform the duties of the Centre Manager, Supervisor, Technical Supervisor, Inspector, Assistant Inspector, or Service Delivery Officer 500 27 Failure to ensure that an Arabic-speaking receptionist, as well as other staff, are present in the service hall during the times approved by the Agency 200 28 Tampering with any data in the Electronic Systems, traffic files, or applications related to the services provided in the Centre 1,000 29 Failure by a Permit Holder to perform his obligations under the implementing bylaw of this Resolution 200",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (2)\n3,000 17 Failure to provide an insurance policy, issued by an insurance company licensed in the UAE, in accordance with the requirements approved by the RTA in this respect, or failure to maintain this insurance policy valid throughout the term of the Establishment’s Permit 5,000 18 Using the Establishment’s Training Vehicles, buildings, or facilities for conducting any activity other than the Activity authorised by the Agency 5,000 19 Conducting any other activity even if it is related to the Establishment’s main Activity or using any part of the land plot on which its building is constructed for any other commercial purposes without first obtaining the written approval of the Agency and other concerned entities in the Emirate 5,000 20 Failure to designate one or more experienced and specialised Instructors to explain road traffic legislation to Learners in the languages determined by the RTA 1,000 21 Failure to provide the buildings, facilities, equipment, devices, programmes, and systems required for driving training in accordance with the relevant specifications and requirements approved by the Agency 3,000 22 Failure to comply with the times prescribed by the Agency for",
+      "Executive Council Resolution No. (2) of 2026 Amending Executive Council Resolution No. (38) of 2018 Regulating the Activity of Driving Instruction in the Emirate of Dubai\nSchedule (2)\nwith the relevant specifications and requirements approved by the Agency 3,000 22 Failure to comply with the times prescribed by the Agency for conducting the Activity 1,000 23 Failure to deliver the training sessions and theory lessons prescribed 2,000 by the Agency 24 Allowing any person other than a Learner to get on board a Training Vehicle during driving training without first obtaining the relevant written approval of the Agency 2,000 25 Failure by an Establishment to notify the Agency, in accordance with the rules prescribed by the RTA in this respect, of its intention to cease the Activity 3,000 26 Failure to cooperate with the competent RTA employees or to provide them with all the data and information they request 2,000 27 Exceeding the maximum capacity of a Training Vehicle as specified in the Permit issued for the Establishment 2,000 28 Failure to ensure that the requirements for electronic connection with the systems adopted by the Agency for conducting the Activity are met 2,000 29 Failure to ensure the regular maintenance of the training and testing tracks of the Establishment"
+    ],
+    "expected_rank": {
+      "lexical": 1,
+      "semantic": 1,
+      "hybrid": 1
+    }
+  }
+]

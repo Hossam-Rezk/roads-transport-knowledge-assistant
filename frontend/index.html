@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roads &amp; Transport Assistant</title>
+<style>
+  :root {
+    --bg: #f4f6f8; --surface: #ffffff; --ink: #17212f; --muted: #647184; --line: #dfe4ea;
+    --accent: #0f766e; --accent-ink: #ffffff; --accent-soft: #e3f3f1;
+    --user: #17324d; --user-ink: #ffffff; --warn: #9a5b00; --warn-soft: #fff4dc;
+    --stop: #a12b2b; --stop-soft: #fdecec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f151c; --surface: #18212b; --ink: #e7edf3; --muted: #93a1b2; --line: #2a3644;
+      --accent: #37b5a8; --accent-ink: #06201d; --accent-soft: #15332f;
+      --user: #2b4d70; --user-ink: #ffffff; --warn: #f0b955; --warn-soft: #3a2d12;
+      --stop: #f08a8a; --stop-soft: #3b1c1c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.6 system-ui, "Segoe UI", Roboto, sans-serif;
+         display: flex; flex-direction: column; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  a { color: var(--accent); }
+
+  /* ---------- header ---------- */
+  header { display: flex; align-items: center; gap: 12px; padding: 12px 20px;
+           background: var(--surface); border-bottom: 1px solid var(--line); }
+  .logo { width: 36px; height: 36px; border-radius: 10px; background: var(--accent);
+          display: grid; place-items: center; flex: none; }
+  .logo svg { width: 20px; height: 20px; stroke: var(--accent-ink); }
+  .brand { line-height: 1.25; min-width: 0; }
+  .brand strong { display: block; font-size: 15px; }
+  .brand span { font-size: 12.5px; color: var(--muted); }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+         background: var(--muted); margin-right: 6px; }
+  .dot.ready { background: #22a06b; }
+  .dot.empty { background: #d9822b; }
+  .spacer { flex: 1; }
+  .ghost { background: none; border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; }
+  .ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---------- conversation ---------- */
+  main { flex: 1; overflow-y: auto; scroll-behavior: smooth; }
+  .column { max-width: 780px; margin: 0 auto; padding: 24px 16px 8px; }
+
+  .welcome { text-align: center; padding: 8vh 0 24px; }
+  .welcome h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .welcome p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
+  .suggestions { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; text-align: left; }
+  .suggestion { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+                padding: 12px 14px; }
+  .suggestion:hover { border-color: var(--accent); }
+  .suggestion small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+  .notice { background: var(--warn-soft); color: var(--warn); border-radius: 12px;
+            padding: 12px 14px; margin: 0 auto 20px; max-width: 520px; }
+  .notice button { margin-left: 8px; border: 1px solid currentColor; background: none;
+                   border-radius: 8px; padding: 4px 10px; color: inherit; }
+
+  .message { margin-bottom: 22px; animation: rise .25s ease-out; }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+  .message.user { display: flex; justify-content: flex-end; }
+  .message.user .bubble { background: var(--user); color: var(--user-ink); border-radius: 16px 16px 4px 16px;
+                          padding: 10px 14px; max-width: 85%; white-space: pre-wrap; }
+  .message.assistant .card { background: var(--surface); border: 1px solid var(--line);
+                             border-radius: 4px 16px 16px 16px; padding: 14px 16px; }
+
+  /* progress shown while the graph works */
+  .progress { font-size: 13.5px; color: var(--muted); }
+  .progress summary { cursor: pointer; list-style: none; }
+  .progress summary::-webkit-details-marker { display: none; }
+  .step { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
+  .step .icon { width: 14px; height: 14px; flex: none; border-radius: 50%; }
+  .step.active { color: var(--ink); }
+  .step.active .icon { border: 2px solid var(--line); border-top-color: var(--accent);
+                       animation: spin .7s linear infinite; }
+  .step.done .icon { background: var(--accent-soft); position: relative; }
+  .step.done .icon::after { content: ""; position: absolute; left: 4.5px; top: 2.5px; width: 3px; height: 6px;
+                            border: solid var(--accent); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .reading { margin: 4px 0 2px 22px; font-size: 12.5px; }
+  .progress.finished { margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px dashed var(--line); }
+
+  /* the answer */
+  .answer { overflow-wrap: anywhere; }
+  .answer p { margin: 0 0 12px; }
+  .answer ul, .answer ol { margin: 0 0 12px; padding-left: 24px; }
+  .answer li { margin-bottom: 6px; padding-left: 2px; }
+  .answer li::marker { color: var(--accent); font-weight: 600; }
+  .answer > :last-child { margin-bottom: 0; }
+  .answer strong { font-weight: 650; }
+  .answer .typing::after { content: ""; display: inline-block; width: 7px; height: 1.05em; margin-left: 2px;
+                          background: var(--accent); vertical-align: text-bottom; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .ref { display: inline-block; min-width: 18px; padding: 0 5px; margin: 0 1px; border-radius: 9px;
+         background: var(--accent-soft); color: var(--accent); font-size: 11.5px; font-weight: 600;
+         text-align: center; text-decoration: none; line-height: 18px; vertical-align: 1px; }
+  .ref:hover { background: var(--accent); color: var(--accent-ink); }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .04em;
+         text-transform: uppercase; border-radius: 6px; padding: 2px 8px; margin-bottom: 8px; }
+  .tag.ask { background: var(--warn-soft); color: var(--warn); }
+  .tag.stop { background: var(--stop-soft); color: var(--stop); }
+  .footnote { margin-top: 12px; font-size: 12.5px; color: var(--muted); }
+
+  .sources { margin-top: 14px; display: grid; gap: 8px; }
+  .sources h4 { margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .source { display: flex; gap: 10px; align-items: flex-start; border: 1px solid var(--line); border-radius: 10px;
+            padding: 8px 10px; text-decoration: none; color: inherit; font-size: 13.5px; scroll-margin: 80px; }
+  .source:hover, .source.flash { border-color: var(--accent); background: var(--accent-soft); }
+  .source .number { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-soft);
+                    color: var(--accent); font-weight: 600; font-size: 12px; display: grid; place-items: center; }
+  .source small { display: block; color: var(--muted); font-size: 12px; }
+
+  /* ---------- composer ---------- */
+  footer { background: linear-gradient(transparent, var(--bg) 24%); padding: 8px 16px 14px; }
+  .composer { max-width: 780px; margin: 0 auto; }
+  .box { display: flex; align-items: flex-end; gap: 8px; background: var(--surface);
+         border: 1px solid var(--line); border-radius: 16px; padding: 8px 8px 8px 14px; }
+  .box:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .box.clarifying { border-color: var(--warn); }
+  textarea { flex: 1; border: none; outline: none; resize: none; background: none; color: inherit;
+             font: inherit; max-height: 160px; padding: 6px 0; }
+  .icon-button { width: 36px; height: 36px; border-radius: 10px; border: none; background: none;
+                 display: grid; place-items: center; color: var(--muted); flex: none; }
+  .icon-button:hover { background: var(--bg); color: var(--ink); }
+  .send { background: var(--accent); color: var(--accent-ink); }
+  .send:hover { background: var(--accent); color: var(--accent-ink); filter: brightness(1.08); }
+  .send:disabled { opacity: .45; cursor: not-allowed; }
+  .icon-button svg { width: 18px; height: 18px; }
+  .options { display: none; flex-wrap: wrap; gap: 10px; padding: 10px 4px 2px; font-size: 13px; color: var(--muted); }
+  .options.open { display: flex; }
+  .options label { display: flex; flex-direction: column; gap: 3px; }
+  .options select, .options input { font: inherit; padding: 5px 8px; border: 1px solid var(--line);
+         border-radius: 8px; background: var(--surface); color: var(--ink); width: 150px; }
+  .hint { text-align: center; font-size: 12px; color: var(--muted); margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+      <path d="M7 21 10 3M17 21 14 3M12 6v2M12 11v2M12 16v2"/></svg>
+  </div>
+  <div class="brand">
+    <strong>Roads &amp; Transport Assistant</strong>
+    <span><i class="dot" id="statusDot"></i><span id="statusText">Connecting...</span></span>
+  </div>
+  <div class="spacer"></div>
+  <button class="ghost" id="newChat">New chat</button>
+</header>
+
+<main id="scroller">
+  <div class="column" id="conversation">
+    <div class="welcome" id="welcome">
+      <h1>Ask about Dubai roads and transport law</h1>
+      <p>Answers come only from the indexed legislation and every statement links to its
+         source article and page.</p>
+      <div class="notice" id="indexNotice" hidden>
+        The legislation has not been indexed yet.
+        <button id="buildIndex">Build the index</button>
+      </div>
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="composer">
+    <div class="box" id="box">
+      <textarea id="input" rows="1" placeholder="Ask a question..." maxlength="2000"></textarea>
+      <button class="icon-button" id="toggleOptions" title="Search options" aria-label="Search options">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
+      </button>
+      <button class="icon-button send" id="send" title="Send" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+    </div>
+    <div class="options" id="options">
+      <label>Search mode
+        <select id="mode"><option value="hybrid">Hybrid</option><option value="lexical">Lexical (keywords)</option><option value="semantic">Semantic (meaning)</option></select></label>
+      <label>Year of issue <input id="year" type="number" placeholder="Any"></label>
+      <label>Type
+        <select id="type"><option value="">Any</option><option>Law</option><option>Resolution</option><option>Regulation</option></select></label>
+      <label>Status
+        <select id="status"><option value="">Any</option><option>In Force</option><option>In Force as Amended</option><option>Not in Force</option></select></label>
+    </div>
+    <div class="hint">Not legal advice. The collection may be incomplete; the Arabic original prevails.</div>
+  </div>
+</footer>
+
+<script>
+// ============================================================ helpers
+const $ = (id) => document.getElementById(id);
+const escapeHtml = (text) => String(text ?? "").replace(/[&<>"']/g,
+  (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const element = (tag, className, html) => {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (html !== undefined) node.innerHTML = html;
+  return node;
+};
+
+const SUGGESTIONS = [
+  ["Traffic toll", "Who is exempt from paying the traffic toll?"],
+  ["Autonomous vehicles", "What are the obligations of an operator of autonomous vehicles?"],
+  ["Airports", "How much is the Dubai airports departure fee and who is exempt?"],
+  ["Try an ambiguous one", "How much is the fine?"],
+];
+
+let threadId = localStorage.getItem("threadId") || newThreadId();
+let pendingClarification = null;    // set while the assistant waits for a clarification
+let busy = false;
+
+function newThreadId() { return "chat-" + crypto.randomUUID().slice(0, 12); }
+
+function scrollToBottom() { $("scroller").scrollTop = $("scroller").scrollHeight; }
+
+// ============================================================ API calls
+async function getJson(path) { return (await fetch(path)).json(); }
+
+/** POST a chat request and call onEvent for every Server-Sent Event received. */
+async function streamEvents(path, body, onEvent) {
+  const response = await fetch(path, {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+  if (!response.ok) {                       // validation errors are plain JSON, not a stream
+    const data = await response.json();
+    const message = data.error?.message
+      || (data.detail || []).map((item) => item.msg).join("; ") || "Request failed";
+    onEvent({type: "error", code: data.error?.code || "invalid_request", message});
+    return;
+  }
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  while (true) {
+    const {done, value} = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, {stream: true});
+    let boundary;
+    while ((boundary = buffer.indexOf("\n\n")) >= 0) {
+      const block = buffer.slice(0, boundary);
+      buffer = buffer.slice(boundary + 2);
+      if (block.startsWith("data: ")) onEvent(JSON.parse(block.slice(6)));
+    }
+  }
+}
+
+// ============================================================ rendering
+function addUserMessage(text) {
+  $("welcome").hidden = true;
+  const message = element("div", "message user");
+  message.appendChild(element("div", "bubble", escapeHtml(text)));
+  $("conversation").appendChild(message);
+  scrollToBottom();
+}
+
+/** Create an empty assistant card with a live progress list. */
+function addAssistantMessage() {
+  const message = element("div", "message assistant");
+  const card = element("div", "card");
+  const progress = element("details", "progress");
+  progress.open = true;
+  progress.appendChild(element("summary", "", "Working..."));
+  card.appendChild(progress);
+  message.appendChild(card);
+  $("conversation").appendChild(message);
+  scrollToBottom();
+  return {card, progress, startedAt: performance.now(), stepCount: 0};
+}
+
+function showStage(view, label) {
+  view.progress.querySelectorAll(".step.active").forEach((step) => step.className = "step done");
+  const step = element("div", "step active", `<span class="icon"></span><span>${escapeHtml(label)}</span>`);
+  view.progress.appendChild(step);
+  view.stepCount += 1;
+  scrollToBottom();
+}
+
+function showReading(view, documentTitles) {
+  // "Law No. (22) of 2006 Concerning the Traffic Toll..." -> "Law No. (22) of 2006"
+  const shortNames = documentTitles.map((title) => (title.match(/^.*? of (?:19|20)\d\d/) || [title])[0]);
+  view.progress.appendChild(
+    element("div", "reading", "Reading: " + escapeHtml([...new Set(shortNames)].join(" · "))));
+  scrollToBottom();
+}
+
+function finishProgress(view) {
+  view.progress.querySelectorAll(".step.active").forEach((step) => step.className = "step done");
+  const seconds = ((performance.now() - view.startedAt) / 1000).toFixed(1);
+  view.progress.querySelector("summary").textContent = `Completed ${view.stepCount} steps in ${seconds}s`;
+  view.progress.open = false;
+  view.progress.classList.add("finished");
+}
+
+/**
+ * Turn one line of answer text into small HTML pieces for the typing effect.
+ * Citation markers such as [dlp-13-003-0] become numbered links to the source
+ * list, and **bold** text becomes <strong>.
+ */
+function linePieces(lineText, citations, sourceIdPrefix) {
+  const numberByChunkId = new Map(citations.map((citation, index) => [citation.chunk_id, index + 1]));
+  const pieces = [];
+  const pushWords = (text) => {
+    for (const segment of text.split(/(\*\*[^*]+\*\*)/)) {
+      const isBold = segment.startsWith("**") && segment.endsWith("**") && segment.length > 4;
+      const words = (isBold ? segment.slice(2, -2) : segment).match(/\s+|\S+/g) || [];
+      words.forEach((word) => pieces.push(isBold ? `<strong>${escapeHtml(word)}</strong>` : escapeHtml(word)));
+    }
+  };
+  let cursor = 0;
+  for (const match of lineText.matchAll(/\s*\[([^\[\]]+)\]/g)) {
+    const chunkIds = match[1].split(/[,;]\s*/).map((id) => id.trim());
+    if (!chunkIds.every((id) => numberByChunkId.has(id))) continue;       // not a citation
+    pushWords(lineText.slice(cursor, match.index));
+    for (const id of chunkIds) {
+      const number = numberByChunkId.get(id);
+      pieces.push(`<a class="ref" href="#${sourceIdPrefix}-${number}" data-source="${sourceIdPrefix}-${number}">${number}</a>`);
+    }
+    cursor = match.index + match[0].length;
+  }
+  pushWords(lineText.slice(cursor));
+  return pieces;
+}
+
+/**
+ * Split an answer into blocks: paragraphs, bullet items ("- item") and
+ * numbered items ("1. item"). A list written on one line, such as
+ * "... include: 1) first; 2) second", is broken into separate items first.
+ */
+function answerBlocks(answerText, citations, sourceIdPrefix) {
+  let text = answerText;
+  if ((text.match(/(^|\s)\d{1,2}[.)]\s/g) || []).length >= 2) {
+    text = text.replace(/([:;.,])\s+(?=\d{1,2}[.)]\s)/g, "$1\n");
+  }
+  const blocks = [];
+  for (const rawLine of text.split("\n")) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const bullet = line.match(/^[-*•]\s+(.*)$/);
+    const numbered = line.match(/^\d{1,2}[.)]\s+(.*)$/);
+    const kind = bullet ? "bullet" : numbered ? "numbered" : "paragraph";
+    const content = bullet ? bullet[1] : numbered ? numbered[1] : line;
+    blocks.push({kind, pieces: linePieces(content, citations, sourceIdPrefix)});
+  }
+  return blocks;
+}
+
+const pause = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+/**
+ * Write the answer into `target` block by block. With `animate` the words
+ * appear a few at a time, like text being typed; without it they appear at once.
+ */
+async function renderAnswer(target, answerText, citations = [], sourceIdPrefix = "", animate = true) {
+  let currentList = null, currentListKind = null;
+  for (const block of answerBlocks(answerText, citations, sourceIdPrefix)) {
+    let blockElement;
+    if (block.kind === "paragraph") {
+      currentList = currentListKind = null;
+      blockElement = target.appendChild(element("p"));
+    } else {
+      if (currentListKind !== block.kind) {                   // start a new <ul> or <ol>
+        currentList = target.appendChild(element(block.kind === "bullet" ? "ul" : "ol"));
+        currentListKind = block.kind;
+      }
+      blockElement = currentList.appendChild(element("li"));
+    }
+    if (!animate) { blockElement.innerHTML = block.pieces.join(""); continue; }
+
+    blockElement.classList.add("typing");
+    for (let index = 0; index < block.pieces.length; index += 3) {
+      blockElement.insertAdjacentHTML("beforeend", block.pieces.slice(index, index + 3).join(""));
+      scrollToBottom();
+      await pause(20);
+    }
+    blockElement.classList.remove("typing");
+  }
+}
+
+function sourceList(citations, sourceIdPrefix) {
+  const list = element("div", "sources");
+  list.appendChild(element("h4", "", citations.length === 1 ? "Source" : "Sources"));
+  citations.forEach((citation, index) => {
+    const where = [citation.article ? `Article (${citation.article})` : null,
+                   `page ${citation.locator}`].filter(Boolean).join(" · ");
+    const link = element("a", "source",
+      `<span class="number">${index + 1}</span>
+       <span>${escapeHtml(citation.title)}<small>${escapeHtml(where)} · ${escapeHtml(citation.chunk_id)}</small></span>`);
+    link.id = `${sourceIdPrefix}-${index + 1}`;
+    link.href = citation.source_url || "#";
+    link.target = "_blank";
+    link.rel = "noopener";
+    list.appendChild(link);
+  });
+  return list;
+}
+
+async function showFinal(view, response) {
+  finishProgress(view);
+  const {status, citations} = response;
+
+  if (status === "needs_clarification") {
+    view.card.appendChild(element("div", "tag ask", "One detail needed"));
+    const question = element("div", "answer");
+    view.card.appendChild(question);
+    await renderAnswer(question, response.clarification.question);
+    setPendingClarification(response.clarification);
+    return;
+  }
+
+  if (status === "out_of_scope") view.card.appendChild(element("div", "tag stop", "Outside scope"));
+  if (status === "insufficient_evidence") view.card.appendChild(element("div", "tag stop", "Not enough evidence"));
+
+  // The disclaimer line is shown as a small footnote, not typed with the answer.
+  const [body, note] = response.answer.split("\n\nNote: ");
+  const sourceIdPrefix = "source-" + Math.random().toString(36).slice(2, 8);
+  const answer = element("div", "answer");
+  view.card.appendChild(answer);
+  await renderAnswer(answer, body, citations, sourceIdPrefix);
+
+  if (citations.length) view.card.appendChild(sourceList(citations, sourceIdPrefix));
+  if (note) view.card.appendChild(element("div", "footnote", escapeHtml("Note: " + note)));
+  setPendingClarification(null);
+  scrollToBottom();
+}
+
+function showError(view, event) {
+  finishProgress(view);
+  view.progress.remove();
+  view.card.appendChild(element("div", "tag stop", "Something went wrong"));
+  view.card.appendChild(element("div", "answer", escapeHtml(event.message)));
+  if (event.code === "index_unavailable") refreshStatus();
+}
+
+// Clicking a citation number highlights its source instead of leaving the page.
+document.addEventListener("click", (event) => {
+  const reference = event.target.closest("a.ref");
+  if (!reference) return;
+  event.preventDefault();
+  const source = document.getElementById(reference.dataset.source);
+  if (!source) return;
+  source.scrollIntoView({block: "nearest", behavior: "smooth"});
+  source.classList.add("flash");
+  setTimeout(() => source.classList.remove("flash"), 1200);
+});
+
+// ============================================================ sending
+function setPendingClarification(clarification) {
+  pendingClarification = clarification;
+  $("box").classList.toggle("clarifying", Boolean(clarification));
+  $("input").placeholder = clarification ? "Type your answer to the question above..." : "Ask a question...";
+}
+
+function readFilters() {
+  const filters = {};
+  if ($("year").value) filters.year = Number($("year").value);
+  if ($("type").value) filters.legislation_type = $("type").value;
+  if ($("status").value) filters.status = $("status").value;
+  return filters;
+}
+
+function setBusy(value) {
+  busy = value;
+  $("send").disabled = value;
+}
+
+async function send(text) {
+  text = text.trim();
+  if (!text || busy) return;
+  setBusy(true);
+  $("input").value = "";
+  autoGrow();
+  addUserMessage(text);
+  const view = addAssistantMessage();
+
+  const [path, body] = pendingClarification
+    ? ["/chat/resume/stream", {thread_id: threadId, interrupt_id: pendingClarification.interrupt_id, clarification: text}]
+    : ["/chat/stream", {thread_id: threadId, message: text, search_mode: $("mode").value, filters: readFilters()}];
+
+  let finalEvent = null;
+  try {
+    await streamEvents(path, body, (event) => {
+      if (event.type === "stage") showStage(view, event.label);
+      else if (event.type === "sources") showReading(view, event.documents);
+      else finalEvent = event;                       // "final" or "error"
+    });
+    if (finalEvent?.type === "final") await showFinal(view, finalEvent.response);
+    else showError(view, finalEvent || {message: "The connection closed before an answer arrived."});
+  } catch (error) {
+    showError(view, {message: "Could not reach the server."});
+  }
+  setBusy(false);
+  $("input").focus();
+}
+
+function autoGrow() {
+  const input = $("input");
+  input.style.height = "auto";
+  input.style.height = Math.min(input.scrollHeight, 160) + "px";
+}
+
+$("send").onclick = () => send($("input").value);
+$("input").addEventListener("input", autoGrow);
+$("input").addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); send($("input").value); }
+});
+$("toggleOptions").onclick = () => $("options").classList.toggle("open");
+
+$("newChat").onclick = () => {
+  threadId = newThreadId();
+  localStorage.setItem("threadId", threadId);
+  document.querySelectorAll(".message").forEach((message) => message.remove());
+  $("welcome").hidden = false;
+  setPendingClarification(null);
+  $("input").focus();
+};
+
+// ============================================================ start-up
+async function refreshStatus() {
+  try {
+    const health = await getJson("/health");
+    $("statusDot").className = "dot " + (health.index_available ? "ready" : "empty");
+    $("statusText").textContent = health.index_available
+      ? `${health.documents} documents indexed` : "Index not built yet";
+    $("indexNotice").hidden = health.index_available;
+  } catch (error) {
+    $("statusDot").className = "dot";
+    $("statusText").textContent = "Server not reachable";
+  }
+}
+
+$("buildIndex").onclick = async () => {
+  $("buildIndex").disabled = true;
+  $("buildIndex").textContent = "Indexing, about a minute...";
+  await fetch("/ingest", {method: "POST", headers: {"Content-Type": "application/json"}, body: "{}"});
+  $("buildIndex").disabled = false;
+  $("buildIndex").textContent = "Build the index";
+  refreshStatus();
+};
+
+/** After a page reload or server restart, show the saved conversation again. */
+async function restoreThread() {
+  const requestedThreadId = threadId;
+  const thread = await getJson("/threads/" + encodeURIComponent(requestedThreadId));
+  // Ignore the reply if the user started a new chat while it was loading.
+  if (!thread.exists || requestedThreadId !== threadId) return;
+  for (const message of thread.messages) {
+    if (message.role === "human") { addUserMessage(message.content); continue; }
+    const restored = element("div", "message assistant");
+    const card = restored.appendChild(element("div", "card"));
+    // Saved messages keep their raw [chunk-id] markers; drop them for display.
+    const savedText = message.content.split("\n\nNote: ")[0].replace(/\s*\[[a-z]+-\d+-\d+-\d+(?:[,;\s]+[a-z]+-\d+-\d+-\d+)*\]/g, "");
+    await renderAnswer(card.appendChild(element("div", "answer")), savedText, [], "", false);
+    $("conversation").appendChild(restored);
+  }
+  if (thread.pending_interrupt) {
+    $("welcome").hidden = true;
+    const waiting = element("div", "message assistant");
+    waiting.appendChild(element("div", "card",
+      `<div class="tag ask">One detail needed</div>
+       <div class="answer">${escapeHtml(thread.pending_interrupt.question)}</div>`));
+    $("conversation").appendChild(waiting);
+    setPendingClarification(thread.pending_interrupt);
+  }
+  scrollToBottom();
+}
+
+SUGGESTIONS.forEach(([topic, question]) => {
+  const card = element("button", "suggestion", `<small>${escapeHtml(topic)}</small>${escapeHtml(question)}`);
+  card.onclick = () => send(question);
+  $("suggestions").appendChild(card);
+});
+
+localStorage.setItem("threadId", threadId);
+refreshStatus();
+restoreThread();
+$("input").focus();
+</script>
+</body>
+</html>
